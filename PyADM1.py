@@ -27,9 +27,9 @@ This file has dependencies to feedstock.py and ADMparams.py
 """
 
 import clr          # needed to add the C# dlls as reference
-
 import numpy as np
 import pandas as pd
+import math
 
 from ADMparams import ADMparams
 
@@ -225,10 +225,10 @@ class PyADM1:
         print('FOS/TAC = {0}'.format(self._FOSTAC))
         print('VFA = {0}'.format(self._VFA))
         print('TAC = {0}'.format(self._TAC))
-        #print('SS = {0}'.format(ADMstate.calcSSOfADMstate(state_ADM1xp).printValue()))
-        #print('VS = {0}'.format(ADMstate.calcVSOfADMstate(state_ADM1xp, 'kgCOD/m^3').printValue()))
+        print('SS = {0}'.format(ADMstate.calcSSOfADMstate(state_ADM1xp).printValue()))
+        print('VS = {0}'.format(ADMstate.calcVSOfADMstate(state_ADM1xp, 'kgCOD/m^3').printValue()))
         print('Ac/Pro = {0}'.format(self._AcvsPro))
-        #print('Biomass = {0}'.format(ADMstate.calcBiomassOfADMstate(state_ADM1xp).printValue()))
+        print('Biomass = {0}'.format(ADMstate.calcBiomassOfADMstate(state_ADM1xp).printValue()))
 
         # calc biogas production rates from state vector
         q_gas, q_ch4, q_co2, p_gas = self._calc_gas(state_ADM1xp)
@@ -381,16 +381,16 @@ class PyADM1:
         # this extension introduces instabilities into the simulation, so it is outcommented. the TS value calculated in
         # calcTS is also not very accurate
         # Erweiterung der hydrolyse, abhängigkeit von TS gehalt im fermenter, s. diss. von Koch 2010, S. 62
-        #TS = digester.calcTS(state_zero, self.feedstock.mySubstrates, self.Q)
-        #TS_digester = TS.Value
+        TS = digester.calcTS(state_zero, self._feedstock.mySubstrates(), self._Q)
+        TS_digester = TS.Value
 
-        #Khyd = 5.5 # 2.5
-        #nhyd = 2.3
+        Khyd = 5.5 # 2.5
+        nhyd = 2.3
 
-        #hydro_koch = 1.0 / (1.0 + math.pow(TS_digester/Khyd, nhyd))
+        hydro_koch = 1.0 / (1.0 + math.pow(TS_digester/Khyd, nhyd))
 
         # by setting hydro_koch to 1, we are not using it
-        hydro_koch = 1.0
+        #hydro_koch = 1.0
         #print(hydro_koch)
 
         # biochemical process rates from Rosen et al (2006) BSM2 report
