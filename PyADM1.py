@@ -206,20 +206,20 @@ class PyADM1:
         to store those values over all ADM1 simulations
         :param state_ADM1xp: ADM1 state vector gotten from the last simulation
         """
-        self._pH_l.append(np.round(ADMstate.calcPHOfADMstate(state_ADM1xp), 1))
-        self._FOSTAC.append(np.round(ADMstate.calcFOSTACOfADMstate(state_ADM1xp).Value, 2))
-        self._AcvsPro.append(np.round(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_ADM1xp).Value, 1))
-        self._VFA.append(np.round(ADMstate.calcVFAOfADMstate(state_ADM1xp, 'gHAceq/l').Value, 2))
-        self._TAC.append(np.round(ADMstate.calcTACOfADMstate(state_ADM1xp, 'gCaCO3eq/l').Value, 1))
+        self._pH_l.append(float(np.round(ADMstate.calcPHOfADMstate(state_ADM1xp), 1)))
+        self._FOSTAC.append(float(np.round(ADMstate.calcFOSTACOfADMstate(state_ADM1xp).Value, 2)))
+        self._AcvsPro.append(float(np.round(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_ADM1xp).Value, 1)))
+        self._VFA.append(float(np.round(ADMstate.calcVFAOfADMstate(state_ADM1xp, 'gHAceq/l').Value, 2)))
+        self._TAC.append(float(np.round(ADMstate.calcTACOfADMstate(state_ADM1xp, 'gCaCO3eq/l').Value, 1)))
 
         # to get at least 3 values into the list, because the last three values go to the controller.
         # I am assuming here that we start from a steady state
         if len(self._pH_l) < 2:
-            self._pH_l.append(np.round(ADMstate.calcPHOfADMstate(state_ADM1xp), 1))
-            self._FOSTAC.append(np.round(ADMstate.calcFOSTACOfADMstate(state_ADM1xp).Value, 2))
-            self._AcvsPro.append(np.round(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_ADM1xp).Value, 1))
-            self._VFA.append(np.round(ADMstate.calcVFAOfADMstate(state_ADM1xp, 'gHAceq/l').Value, 2))
-            self._TAC.append(np.round(ADMstate.calcTACOfADMstate(state_ADM1xp, 'gCaCO3eq/l').Value, 1))
+            self._pH_l.append(float(np.round(ADMstate.calcPHOfADMstate(state_ADM1xp), 1)))
+            self._FOSTAC.append(float(np.round(ADMstate.calcFOSTACOfADMstate(state_ADM1xp).Value, 2)))
+            self._AcvsPro.append(float(np.round(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_ADM1xp).Value, 1)))
+            self._VFA.append(float(np.round(ADMstate.calcVFAOfADMstate(state_ADM1xp, 'gHAceq/l').Value, 2)))
+            self._TAC.append(float(np.round(ADMstate.calcTACOfADMstate(state_ADM1xp, 'gCaCO3eq/l').Value, 1)))
 
         print('pH(lib) = {0}'.format(self._pH_l))
         print('FOS/TAC = {0}'.format(self._FOSTAC))
@@ -233,19 +233,19 @@ class PyADM1:
         # calc biogas production rates from state vector
         q_gas, q_ch4, q_co2, p_gas = self._calc_gas(state_ADM1xp)
 
-        self._Q_GAS.append(q_gas)
-        self._Q_CH4.append(q_ch4)
-        self._Q_CO2.append(q_co2)
-        self._P_GAS.append(p_gas)
+        self._Q_GAS.append(float(q_gas))
+        self._Q_CH4.append(float(q_ch4))
+        self._Q_CO2.append(float(q_co2))
+        self._P_GAS.append(float(p_gas))
 
         # to get at least 3 values into the list, because the last three values go to controller.
         # I am assuming here that we start from a steady state
         if len(self._Q_GAS) < 2:
             for i in range(0,2):        # to have at least 4 values in the lists
-                self._Q_GAS.append(q_gas)
-                self._Q_CH4.append(q_ch4)
-                self._Q_CO2.append(q_co2)
-                self._P_GAS.append(p_gas)
+                self._Q_GAS.append(float(q_gas))
+                self._Q_CH4.append(float(q_ch4))
+                self._Q_CO2.append(float(q_co2))
+                self._P_GAS.append(float(p_gas))
 
         print('Q_gas = {0} m^3/d'.format(self._Q_GAS))
         print('Q_ch4 = {0} m^3/d'.format(self._Q_CH4))
