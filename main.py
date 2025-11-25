@@ -20,7 +20,7 @@ mySimulator = Simulator(adm1)
 
 # initial substrate feed for all substrates. At the moment only values for the first two substrates may be changed, rest 0
 # first value: corn silage, 2nd value: liquid manure, both in m^3/d
-Q = [15, 10, 0, 0, 0, 0, 0, 0, 0, 0]
+Q = [15, 10, 10, 0, 0, 0, 0, 0, 0, 0]
 #Q = [69, 64, 0, 0, 0, 0, 0, 0, 0, 0]
 
 # initial ADM1 state vector where to start the simulation

@@ -1,0 +1,2136 @@
+{
+	"substrates": {
+		"substrate": [
+			{
+				"name": "Silomais",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "21.07",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RF"
+						},
+						{
+							"value": "8.69",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RP"
+						},
+						{
+							"value": "3.68",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RL"
+						},
+						{
+							"value": "43.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "07 Einfluss der stofflichen Zusammensetzung auf die Verdaulichkeit\n  nachwachsender Rohstoffe beim anaeroben Abbau in Biogasreaktoren. S. 110 ff.\n  maize silage 1 (mean 2003)",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "21.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "07 Einfluss der stofflichen Zusammensetzung auf die Verdaulichkeit\n  nachwachsender Rohstoffe beim anaeroben Abbau in Biogasreaktoren. S. 110 ff.\n  maize silage 1 (mean 2003)",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "2.15",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "07 Einfluss der stofflichen Zusammensetzung auf die Verdaulichkeit\n  nachwachsender Rohstoffe beim anaeroben Abbau in Biogasreaktoren. S. 110 ff.\n  maize silage 1 (mean 2003)",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "15.97",
+							"unit": "gCOD/l",
+							"label": "0.3 * ( composites in need for disintegration )",
+							"reference": "war mal 55.94",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "13.03",
+							"unit": "gCOD/l",
+							"label": "0,0600000008940697 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "3.93",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "pH"
+						},
+						{
+							"value": "1.18",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "alter Wert 1.58. es gibt keine Referenz dafür. setze auf 2. \nda CCM einen wert von 3 hat (mais etwas darunter gesetzt. weil kalibrierung \nmit 1.58 gelaufen ist. allerdings hätte in kalibrierung vfa langsam hoch \ngefahren werden müssen um silierprozess zu simulieren -> Block Silo). \nda TS Gehalt von Substrat gesunken ist. \nist vermutung. dass starke säureentwicklung eingesetzt hat.\nReferenz ist die Berechnung aus dem Datenbank Ordner",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0.0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "alter Wert 0.1. es gibt keine Referenz dafür",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.66",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "Substrat_FermenterProben.xls: 0.26, 0.66 und 36.8 ist ein paar",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "6.0",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "Substrat_FermenterProben.xls: 11.0; 36.8 passt zu 0.66",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "13",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "31.97",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "TS"
+						},
+						{
+							"value": "96.25",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.80",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "alter Wert: 0.87",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.14",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "alter Wert 0.025, 0.03, zuletzt: 0.05, 0.16",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "3.8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "4.8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "letzter Wert: 4.4, 5.1",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35.9",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "40",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Mais (GPS) (EK I)",
+				"_id": "maize"
+			},
+			{
+				"name": "Gülle",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "11.35",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "Substrat_FermenterProben.xls\nWert vorher war 21.35 aber zu hoch, Ausreisser",
+							"_symbol": "RF"
+						},
+						{
+							"value": "16.31",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "4.55",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "50.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "35.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "3.15",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "alter Wert: 16.15",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "20.0",
+							"unit": "gCOD/l",
+							"label": "0.3 * ( composites in need for disintegration )",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "7.3",
+							"unit": "gCOD/l",
+							"label": "0,120000001788139 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "7.1",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "12.43",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0.0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.8",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "4.0",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "Substrat_FermenterProben.xls: 3.9",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "212.222121",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "Substrat_FermenterProben.xls\nWert schwankt stark\nfrüher 173.4 (im letzten Test: 103.4), alt: 222.222121",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "16.37",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "online Messung",
+							"_symbol": "T"
+						},
+						{
+							"value": "6.1",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "TS"
+						},
+						{
+							"value": "71.6",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.95",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.27",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "alter Wert: 0.075, letzter Wert: 0.12",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "3.8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "6.8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "letzter Wert: 4.5",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "36.1",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "4",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Schweinegülle (EK II)",
+				"_id": "swinemanure"
+			},
+			{
+				"name": "Grünroggen",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "18.31",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "8.31",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "2.55",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "43.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "21.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "2.15",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "69",
+							"unit": "gCOD/l",
+							"label": "0.3 * ( composites in need for disintegration )",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "19",
+							"unit": "gCOD/l",
+							"label": "0,100000001490116 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "5",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "1",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0.01",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.3",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.5",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "0.01",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "11",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "19.25",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "90",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.75",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.05",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "Gehring 2009",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "3.8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "Gehring 2009",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "17.9",
+							"unit": "1/d",
+							"label": "",
+							"reference": "Gehring 2009",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "27.2",
+							"unit": "1/d",
+							"label": "",
+							"reference": "Gehring 2009",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "32",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Grünroggen (GPS) (EK I)",
+				"_id": "greenrye"
+			},
+			{
+				"name": "Grassilage",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "26.5",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "17.5",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "6.6",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "47.5",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "29.8",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "5.3",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "Biogas from grass silage – Measurements and modeling with ADM1",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "27.89",
+							"unit": "gCOD/l",
+							"label": "0.3 * ( composites in need for disintegration )",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "22.89",
+							"unit": "gCOD/l",
+							"label": "0,140000002086163 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "4.1",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "1.53",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "08 Die Korrektur des Trockensubstanzgehaltes von Grassilagen als Substrat für Biogasanlagen",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "08 Die Korrektur des Trockensubstanzgehaltes von Grassilagen als Substrat für Biogasanlagen",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "1.5",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "konzeptionierung. erstellung und betrieb einer versuchsfermenteranlage zur \n  Bearbeitung von Fragestellungen: 1.5",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "7.01",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "10",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "34.1",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "84.6",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.75",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.04",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "8",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "4.9",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35.6",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "25",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Gras/Ackergras (EK I)",
+				"_id": "grass"
+			},
+			{
+				"name": "Getreide",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "36",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "10.3",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "1.6",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "67.29",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "50.4",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "8.4",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "95.23",
+							"unit": "gCOD/l",
+							"label": "chemical oxygen demand of filtrate",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "35.23",
+							"unit": "gCOD/l",
+							"label": "0,100000001490116 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "4.4",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "0.5",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.59",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "0.001",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "10",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "30.23",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "94.36",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.75",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.05",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "4",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "5",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "10",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Getreide (GPS) (EK I)",
+				"_id": "wheat"
+			},
+			{
+				"name": "GPS",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "44",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "4.3",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "0.8",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "77.29",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "50.4",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "8.4",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "104.86",
+							"unit": "gCOD/l",
+							"label": "chemical oxygen demand of filtrate",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "34.86",
+							"unit": "gCOD/l",
+							"label": "0,100000001490116 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "4.3",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.5",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "0.01",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "10",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "31.23",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "94.36",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.75",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.1",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "4",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "5",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "43",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Getreide (GPS) (EK I)",
+				"_id": "gps"
+			},
+			{
+				"name": "CCM",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "1.8",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RF"
+						},
+						{
+							"value": "10.54",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RP"
+						},
+						{
+							"value": "5.3",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "RL"
+						},
+						{
+							"value": "43.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "21.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "4.01",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "ADL koennte auch deutlich hoeher sein, alter Wert: 18.15",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "46.30",
+							"unit": "gCOD/l",
+							"label": "chemical oxygen demand of filtrate",
+							"reference": "alter Wert: 366.30",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "35.30",
+							"unit": "gCOD/l",
+							"label": "0,0800000011920929 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "4",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "pH"
+						},
+						{
+							"value": "3.5",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "Investigations and mathematical simulation on decentralized\n  anaerobic treatment of agricultural substrate from livestock\n  farming. hard cover\n  Reference for TMR. total_mixed_ratio1.xml\n  war 3 g/l",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0.0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.6",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.55",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "Substrat_FermenterProben.xls: 0.43",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "5.69",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "keine Quelle. keine Messung, alt: 30.69",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "10",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "67.6",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "TS"
+						},
+						{
+							"value": "93.5",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "Substrat_FermenterProben.xls",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.95",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.06",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "alt: 0.045",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "4",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "4.2",
+							"unit": "1/d",
+							"label": "",
+							"reference": "alter Wert 4.6",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35.9",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "135",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Corn-Cob-Mix (CCM) (EK I)",
+				"_id": "ccm"
+			},
+			{
+				"name": "Futterkalk",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "0",
+							"unit": "gCOD/l",
+							"label": "chemical oxygen demand of filtrate",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "0",
+							"unit": "gCOD/l",
+							"label": "0 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "7.5",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "100000",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "2.7 kg/l / 50g/mol * 1000 g/kg = 270/5 mol/l approx 50000 mmol/l     \nda beim abbau von CaCO3 2 molekuele HCO3 entsteht. mal 2 das ganze = 100000 mmol/l\ns. wikipedia calciumhydrogencarbonat\nCaCO3 + CO2 + H2O - Ca2+ + 2HCO3-",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "10",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "90",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "0",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.7",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.1",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "4",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "5",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "10",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Miscellaneous",
+				"_id": "futterkalk"
+			},
+			{
+				"name": "Rindermist",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "18.31",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "18.31",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "3.55",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "43.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "31.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "11.15",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "52.43",
+							"unit": "gCOD/l",
+							"label": "chemical oxygen demand of filtrate",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "12.43",
+							"unit": "gCOD/l",
+							"label": "0,120000001788139 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "7",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "2",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "100",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "12",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "12",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "85",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.7",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.1",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "4",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "3.6",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "10",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Rinderfestmist (EK II)",
+				"_id": "cowmanure"
+			},
+			{
+				"name": "Zwiebeln",
+				"Weender": {
+					"physValue": [
+						{
+							"value": "18.31",
+							"unit": "% TS",
+							"label": "raw fiber (Rohfaser)",
+							"reference": "",
+							"_symbol": "RF"
+						},
+						{
+							"value": "8.31",
+							"unit": "% TS",
+							"label": "raw protein (Rohprotein)",
+							"reference": "",
+							"_symbol": "RP"
+						},
+						{
+							"value": "2.55",
+							"unit": "% TS",
+							"label": "raw lipids (Rohfett)",
+							"reference": "",
+							"_symbol": "RL"
+						},
+						{
+							"value": "43.64",
+							"unit": "% TS",
+							"label": "neutral detergent fiber",
+							"reference": "",
+							"_symbol": "NDF"
+						},
+						{
+							"value": "21.86",
+							"unit": "% TS",
+							"label": "acid detergent fiber",
+							"reference": "",
+							"_symbol": "ADF"
+						},
+						{
+							"value": "2.15",
+							"unit": "% TS",
+							"label": "acid detergent lignin",
+							"reference": "",
+							"_symbol": "ADL"
+						}
+					]
+				},
+				"Phys": {
+					"physValue": [
+						{
+							"value": "72.80",
+							"unit": "gCOD/l",
+							"label": "0.3 * ( composites in need for disintegration )",
+							"reference": "",
+							"_symbol": "COD_S"
+						},
+						{
+							"value": "22.80",
+							"unit": "gCOD/l",
+							"label": "0,120000001788139 * ( composites in need for disintegration -  -  - particulate disintegrated COD )",
+							"reference": "",
+							"_symbol": "SIin"
+						},
+						{
+							"value": "5",
+							"unit": "-",
+							"label": "pH value",
+							"reference": "",
+							"_symbol": "pH"
+						},
+						{
+							"value": "1",
+							"unit": "g/l",
+							"label": "acetic acid + acetate",
+							"reference": "",
+							"_symbol": "Sac"
+						},
+						{
+							"value": "0.01",
+							"unit": "g/l",
+							"label": "butyric acid + butyrate",
+							"reference": "",
+							"_symbol": "Sbu"
+						},
+						{
+							"value": "0.3",
+							"unit": "g/l",
+							"label": "propionic acid + propionate",
+							"reference": "",
+							"_symbol": "Spro"
+						},
+						{
+							"value": "0",
+							"unit": "g/l",
+							"label": "valeric acid + valerate",
+							"reference": "",
+							"_symbol": "Sva"
+						},
+						{
+							"value": "0.5",
+							"unit": "g/l",
+							"label": "soluble ammonium",
+							"reference": "",
+							"_symbol": "Snh4"
+						},
+						{
+							"value": "0.01",
+							"unit": "mmol/l",
+							"label": "total alcalic carbonate",
+							"reference": "",
+							"_symbol": "TAC"
+						},
+						{
+							"value": "11",
+							"unit": "°C",
+							"label": "temperature",
+							"reference": "",
+							"_symbol": "T"
+						},
+						{
+							"value": "19.25",
+							"unit": "% FM",
+							"label": "total solids (VS + Ash)",
+							"reference": "",
+							"_symbol": "TS"
+						},
+						{
+							"value": "90",
+							"unit": "% TS",
+							"label": "volatile solids (sum of all COD containing components)",
+							"reference": "",
+							"_symbol": "VS"
+						},
+						{
+							"value": "0.7",
+							"unit": "100 %",
+							"label": "degradation level",
+							"reference": "",
+							"_symbol": "D_VS"
+						}
+					]
+				},
+				"AD": {
+					"physValue": [
+						{
+							"value": "0.1",
+							"unit": "1/d",
+							"label": "disintegration rate",
+							"reference": "",
+							"_symbol": "kdis"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate carbohydrates",
+							"reference": "",
+							"_symbol": "khyd_ch"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate proteins",
+							"reference": "",
+							"_symbol": "khyd_pr"
+						},
+						{
+							"value": "10",
+							"unit": "1/d",
+							"label": "hydrolysis rate lipids",
+							"reference": "",
+							"_symbol": "khyd_li"
+						},
+						{
+							"value": "20",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_c4"
+						},
+						{
+							"value": "7",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_pro"
+						},
+						{
+							"value": "6",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_ac"
+						},
+						{
+							"value": "35",
+							"unit": "1/d",
+							"label": "",
+							"reference": "",
+							"_symbol": "km_h2"
+						}
+					]
+				},
+				"physValue": {
+					"value": "5",
+					"unit": "€/m^3",
+					"label": "cost",
+					"reference": "",
+					"_symbol": "cost"
+				},
+				"substrate_class": "Sonstiges (EK 0)",
+				"_id": "onions"
+			}
+		]
+	}
+}
