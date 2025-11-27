@@ -220,6 +220,9 @@ class PyADM1:
             self._AcvsPro.append(float(np.round(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_ADM1xp).Value, 1)))
             self._VFA.append(float(np.round(ADMstate.calcVFAOfADMstate(state_ADM1xp, 'gHAceq/l').Value, 2)))
             self._TAC.append(float(np.round(ADMstate.calcTACOfADMstate(state_ADM1xp, 'gCaCO3eq/l').Value, 1)))
+            self._SS.append(float(ADMstate.calcSSOfADMstate(state_ADM1xp).Value))
+            self._VS.append(float(ADMstate.calcVSOfADMstate(state_ADM1xp, 'kgCOD/m^3').Value))
+            self._Biomass.append(float(ADMstate.calcBiomassOfADMstate(state_ADM1xp).Value))
 
         print('pH(lib) = {0}'.format(self._pH_l))
         print('FOS/TAC = {0}'.format(self._FOSTAC))
@@ -229,6 +232,10 @@ class PyADM1:
         print('VS = {0}'.format(ADMstate.calcVSOfADMstate(state_ADM1xp, 'kgCOD/m^3').printValue()))
         print('Ac/Pro = {0}'.format(self._AcvsPro))
         print('Biomass = {0}'.format(ADMstate.calcBiomassOfADMstate(state_ADM1xp).printValue()))
+
+        self._SS.append(float(ADMstate.calcSSOfADMstate(state_ADM1xp).Value))
+        self._VS.append(float(ADMstate.calcVSOfADMstate(state_ADM1xp, 'kgCOD/m^3').Value))
+        self._Biomass.append(float(ADMstate.calcBiomassOfADMstate(state_ADM1xp).Value))
 
         # calc biogas production rates from state vector
         q_gas, q_ch4, q_co2, p_gas = self._calc_gas(state_ADM1xp)
@@ -650,6 +657,31 @@ class PyADM1:
 
         return q_gas, q_ch4, q_co2, p_gas
 
+    def get_state_variables(self, state_vector):
+        """
+        Calculate and return all interesting variables from a given state vector.
+        Returns a dictionary.
+        """
+        # Calc gas
+        q_gas, q_ch4, q_co2, p_gas = self._calc_gas(state_vector)
+
+        # Calc other params using ADMstate
+        pH = float(ADMstate.calcPHOfADMstate(state_vector))
+        fos_tac = float(ADMstate.calcFOSTACOfADMstate(state_vector).Value)
+        ac_pro = float(ADMstate.calcAcetic_vs_PropionicOfADMstate(state_vector).Value)
+        vfa = float(ADMstate.calcVFAOfADMstate(state_vector, 'gHAceq/l').Value)
+        tac = float(ADMstate.calcTACOfADMstate(state_vector, 'gCaCO3eq/l').Value)
+        ss = float(ADMstate.calcSSOfADMstate(state_vector).Value)
+        vs = float(ADMstate.calcVSOfADMstate(state_vector, 'kgCOD/m^3').Value)
+        biomass = float(ADMstate.calcBiomassOfADMstate(state_vector).Value)
+
+        return {
+            'Q_gas': q_gas, 'Q_ch4': q_ch4, 'P_gas': p_gas,
+            'pH': pH, 'FOS_TAC': fos_tac, 'Ac_Pro': ac_pro,
+            'VFA': vfa, 'TAC': tac,
+            'SS': ss, 'VS': vs, 'Biomass': biomass
+        }
+
     # *** PRIVATE STATIC/CLASS methods ***
 
     # *** PUBLIC properties ***
@@ -695,6 +727,15 @@ class PyADM1:
     def TAC(self):
         return self._TAC
 
+    def SS(self):
+        return self._SS
+
+    def VS(self):
+        return self._VS
+
+    def Biomass(self):
+        return self._Biomass
+
     # TODO: those properties should be private as well
 
     V_liq = None
@@ -710,6 +751,9 @@ class PyADM1:
     _AcvsPro = []   # ratio of acetic over propionic acid over all simulations
     _VFA = []       # VFA concentrations over all simulations
     _TAC = []       # TA concentrations over all simulations
+    _SS = []
+    _VS = []
+    _Biomass = []
 
     # vector of volumetric flow rates of the substrates. Length must be equal to the number of substrates defined in xml
     _Q = None
